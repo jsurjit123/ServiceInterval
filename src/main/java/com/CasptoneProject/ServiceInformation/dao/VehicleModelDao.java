@@ -8,5 +8,6 @@ import com.CasptoneProject.ServiceInformation.model.VehicleModel;
 @Repository
 public interface VehicleModelDao extends CrudRepository<VehicleModel, Integer> {
 
-	VehicleModel findByModeleId(Integer modelId);
+	VehicleModel findByModelId(Integer modelId);
+
 }

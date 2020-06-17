@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "hours_min": 0,
+    "hours_max": 250,
+    "actions": [
+      "Inspect Tires",
+      "Lubricate Hinge Pins",
+      "Lubricate Steering Pins (If Equipped)",
+      "Lubricate Rear Hitch",
+      "Lights - Check that all lights (including headlights) are functioning properly",
+      "Fuel system - Drain water and sediment from fuel filter",
+      "Engine - Remove any dirt from area surrounding the engine",
+      "Engine - Check oil level"
+    ]
+  },
+  {
+    "id": 2,
+    "hours_min": 251,
+    "hours_max": 500,
+    "actions": [
+      "Change engine oil and filter (15 L Engine Only)",
+      "Replace fuel filters (15 L Engine Only)",
+      "Check engine speeds, have speeds adjusted by your John Deere Dealer",
+      "Cab and ROPS - Check torque of mounting bolts and nuts",
+      "Alternator drive belt - Check for wear and damages, check belt tension",
+      "Transmission - Replace transmission oil filter, check oil level"
+    ]
+  },
+  {
+    "id": 3,
+    "hours_min": 501,
+    "hours_max": 1000,
+    "actions": [
+      "Test coolant freeze point",
+      "Check suspended front axle accumulator charge pressure",
+      "Replace cab fresh air and recirculation filters"
+    ]
+  },
+  {
+    "id": 4,
+    "hours_min": 1001,
+    "hours_max": 2000,
+    "actions": [
+      "Change transmission, hydraulic, axle oil and filters",
+      "Clean aftertreatment fuel injector (15 L Engine)",
+      "Replace radiator pressure cap (15 L Engine)",
+      "Clean transmission sump screen",
+      "Inspect fan belt and auxiliary drive belt tensioners",
+      "Check axle end play2",
+      "Lubricate draft link support shaft bushing",
+      "Replace fuel tank vent filter",
+      "Replace Diesel Exhaust Fluid (DEF) dosing unit filter (FT4/Stave IV Engines Only)",
+      "Check HydraCushion'99 suspended front axle accumulator charge pressure (If Equipped)."
+    ]
+  },
+  {
+    "id": 5,
+    "hours_min": 2001,
+    "hours_max": 5000,
+    "actions": [
+      "Replace transmission drive shaft damper",
+      "Replace Diesel Exhaust Fluid (DEF) dosing unit filter (FT4/Stage IV Engines Only)",
+      "Replace Diesel Exhaust Fluid (DEF) tank vent filter (FT4/Stage IV Engines Only)"
+    ]
+  },
+  {
+    "id": 6,
+    "hours_min": 5001,
+    "hours_max": 10000,
+    "actions": [
+      "Replace transmission drive shaft damper",
+      "Replace Diesel Exhaust Fluid (DEF) dosing unit filter (FT4/Stage IV Engines Only)",
+      "Replace Diesel Exhaust Fluid (DEF) tank vent filter (FT4/Stage IV Engines Only)"
+    ]
+  }
+]

@@ -45,8 +45,4 @@ public class EquipmentDto {
 		this.equipmentTypeName = equipmentTypeName;
 	}
 
-	public Equipment save(Equipment newEquipment) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }

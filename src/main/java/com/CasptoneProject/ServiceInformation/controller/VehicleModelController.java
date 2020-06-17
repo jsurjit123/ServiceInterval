@@ -22,7 +22,7 @@ import com.CasptoneProject.ServiceInformation.service.VehicleModelService;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
-@RequestMapping("/EquipmentModel")
+@RequestMapping("/VehicleModel")
 public class VehicleModelController {
 
     @Autowired
@@ -43,19 +43,19 @@ public class VehicleModelController {
         return new ApiResponse<>(HttpStatus.OK.value(), "VehicleModel fetched successfully.", vehicleModelService.findByModelId(modelId));
     }
 
-    @GetMapping("/{id}")
-    public ApiResponse<VehicleModel> getOne(@PathVariable int id){
-        return new ApiResponse<>(HttpStatus.OK.value(), "VehicleModel fetched successfully.", vehicleModelService.findById(id));
-    }
+//    @GetMapping("/{modelId}")
+//    public ApiResponse<VehicleModel> getOne(@PathVariable int modelId){
+//        return new ApiResponse<>(HttpStatus.OK.value(), "VehicleModel fetched successfully.", vehicleModelService.findById(modelId));
+//    }
 
-    @PutMapping("/{id}")
+    @PutMapping("/{modelId}")
     public ApiResponse<VehicleModelDto> update(@RequestBody VehicleModelDto vehicleModelsDto) {
         return new ApiResponse<>(HttpStatus.OK.value(), "VehicleModels updated successfully.", vehicleModelService.update(vehicleModelsDto));
     }
 
-    @DeleteMapping("/{id}")
-    public ApiResponse<Void> delete(@PathVariable int id) {
-    	vehicleModelService.delete(id);
-        return new ApiResponse<>(HttpStatus.OK.value(), "User deleted successfully.", null);
+    @DeleteMapping("/{modelId}")
+    public ApiResponse<Void> delete(@PathVariable int modelId) {
+    	vehicleModelService.delete(modelId);
+        return new ApiResponse<>(HttpStatus.OK.value(), "Vehicle Models deleted successfully.", null);
     }
 }

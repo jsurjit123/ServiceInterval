@@ -57,12 +57,12 @@ class EditUserComponent extends Component {
                     </div>
 
                     <div className="form-group">
-                        <label>Password</label>
+                        <label>First Name:</label>
                         <input placeholder="password" name="password" className="form-control" value={this.state.password} onChange={this.onChange}/>
                     </div>
 
                     <div className="form-group">
-                        <label>User Type:</label>
+                        <label>Last Name:</label>
                         <input placeholder="User type" name="userType" className="form-control" value={this.state.userType} onChange={this.onChange}/>
                     </div>
 

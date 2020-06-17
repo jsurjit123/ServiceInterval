@@ -3,6 +3,8 @@ package com.CasptoneProject.ServiceInformation.service.impl;
 import com.CasptoneProject.ServiceInformation.dao.EquipmentDao;
 import com.CasptoneProject.ServiceInformation.model.Equipment;
 import com.CasptoneProject.ServiceInformation.model.EquipmentDto;
+import com.CasptoneProject.ServiceInformation.model.User;
+import com.CasptoneProject.ServiceInformation.model.UserDto;
 import com.CasptoneProject.ServiceInformation.service.EquipmentService;
 
 import org.springframework.beans.BeanUtils;
@@ -43,21 +45,21 @@ public class EquipmentServiceImpl implements EquipmentService {
 		return optionalEquipment.isPresent() ? optionalEquipment.get() : null;
 	}
 
-    @Override
-    public EquipmentDto update(EquipmentDto userDto) {
-        Equipment equipment = findById(userDto.getId());
-        if(equipment != null) {
-            BeanUtils.copyProperties(userDto, equipment, "password", "username");
-            equipmentDao.save(equipment);
-        }
-        return userDto;
-    }
+	 @Override
+	    public EquipmentDto update(EquipmentDto equipmentDto) {
+		 Equipment equipment = findById(equipmentDto.getId());
+	        if(equipment != null) {
+	            BeanUtils.copyProperties(equipmentDto, equipment, "equipmentTypeName");
+	            equipmentDao.save(equipment);
+	        }
+	        return equipmentDto;
+	    }
 
-    @Override
-    public Equipment save(EquipmentDto equipmentDao) {
-	    Equipment newEquipment = new Equipment();
-	    newEquipment.setEquipmentTypeId(equipmentDao.getEquipmentTypeId());
-	    newEquipment.setEquipmentTypeName(equipmentDao.getEquipmentTypeName());
-        return equipmentDao.save(newEquipment);
-    }
+	    @Override
+	    public Equipment save(EquipmentDto equipmentDto) {
+	    	Equipment newEquipment = new Equipment();
+	    	newEquipment.setEquipmentTypeId(equipmentDto.getEquipmentTypeId());
+	    	newEquipment.setEquipmentTypeName(equipmentDto.getEquipmentTypeName());
+	        return equipmentDao.save(newEquipment);
+	    }
 }

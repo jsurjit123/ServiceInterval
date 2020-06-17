@@ -33,28 +33,23 @@ public class EquipmentController {
     }
 
     @GetMapping
-    public ApiResponse<List<Equipment>> listUser(){
+    public ApiResponse<List<Equipment>> listEquipments(){
         return new ApiResponse<>(HttpStatus.OK.value(), "Equipment list fetched successfully.", equipmentService.findAll());
     }
     
-    @GetMapping("/{eqpTypeId}")
-    public ApiResponse<Equipment> getOne(@PathVariable Integer eqpTypeId){
-        return new ApiResponse<>(HttpStatus.OK.value(), "Equipment fetched successfully.", equipmentService.findByEquipmentTypeId(eqpTypeId));
+    @GetMapping("/{equipmentTypeId}")
+    public ApiResponse<Equipment> getOne(@PathVariable Integer equipmentTypeId){
+        return new ApiResponse<>(HttpStatus.OK.value(), "Equipment fetched successfully.", equipmentService.findByEquipmentTypeId(equipmentTypeId));
     }
 
-    @GetMapping("/{id}")
-    public ApiResponse<Equipment> getOne(@PathVariable int id){
-        return new ApiResponse<>(HttpStatus.OK.value(), "Equipment fetched successfully.", equipmentService.findById(id));
-    }
-
-    @PutMapping("/{id}")
+    @PutMapping("/{equipmentTypeId}")
     public ApiResponse<EquipmentDto> update(@RequestBody EquipmentDto equipmentDto) {
         return new ApiResponse<>(HttpStatus.OK.value(), "Equipment updated successfully.", equipmentService.update(equipmentDto));
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{equipmentTypeId}")
     public ApiResponse<Void> delete(@PathVariable int id) {
     	equipmentService.delete(id);
-        return new ApiResponse<>(HttpStatus.OK.value(), "User deleted successfully.", null);
+        return new ApiResponse<>(HttpStatus.OK.value(), "Equipment deleted successfully.", null);
     }
 }

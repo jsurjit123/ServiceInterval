@@ -4,14 +4,11 @@
   "private": true,
   "dependencies": {
     "axios": "^0.19.2",
-    "material-ui": "^0.20.2",
     "react": "^16.13.1",
-    "react-bootstrap": "^0.32.4",
+    "react-border-wrapper": "^1.0.3",
     "react-dom": "^16.13.1",
-    "react-meta-tags": "^0.7.4",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.0.1",
-    "react-tap-event-plugin": "^3.0.3"
+    "react-scripts": "3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
